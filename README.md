@@ -10,8 +10,7 @@
 
 <img src="https://img.shields.io/badge/Version-1.0-brightgreen?style=for-the-badge" >
 </p>   
-<h1>Telegram based rat without Port forwarding</h1><p align="center">
-## Features
+ ## Features
  - Working Android(10 to 15)
  - Read all the notification (WhatsApp,Instagram,etc)
  - Read all Incoming SMS
