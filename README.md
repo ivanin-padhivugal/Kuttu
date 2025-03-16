@@ -13,11 +13,11 @@
 
 
 ### Features
-- Without port forwarding 
-- Telegram based android rat
-- Get gmail list(List of all Gmail accounts installed on mobile phones)
-- Read notifications any apps(Whatsapp,Instagram,etc)
-- Read incoming SMS
+- Get all gmail list(List of all Gmail accounts installed on mobile phones)
+- Read all incoming notifications any apps(Whatsapp,Instagram,etc)
+- Read all incoming SMS
+- No need port forwarding
+- Telegram based rat
 - Cannot delete.
 - Persistence
 
