@@ -12,9 +12,11 @@
 </p>   
 
 ## Features
+<h1>Telegram based rat without Port forwarding</h1>
+ - Working Android(10 to 15)
  - Read all the notification (WhatsApp,Instagram,etc)
  - Read all Incoming SMS
- - anti uninstall
+ - Cannot be uninstall 
  - Get gmail list (What kind of Gmail logins are there? That list.)
- - Working Android(10 to 15)
+
 
