@@ -1,7 +1,7 @@
 <p align="center">
   <img width="250" height="250" src="https://media3.giphy.com/media/XALwMpWaCJ5gr4Fcps/giphy.gif?cid=6c09b952upcyl1meas3obbs87sia3e1etx3x9i8ef68mxvwq&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s">
 </p>
-<h1 align="center">KUTTU</h1><p align="center">
+<h1 align="center">KUTTU-RAT</h1><p align="center">
 <b>⚠️Disclaimer : This software is meant for educational purposes only. I'm not responsible for any malicious use of the app.
 </p>   
 
@@ -16,6 +16,7 @@
 - Get all gmail list(List of all Gmail accounts installed on mobile phones)
 - Read all incoming notifications any apps(Whatsapp,Instagram,etc)
 - Read all incoming SMS
+- Working all latest android versions(10 to 15)
 - No need port forwarding
 - Telegram based rat
 - Cannot delete.
