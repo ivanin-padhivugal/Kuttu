@@ -13,18 +13,13 @@
 
 
 ### Features
-- Permissions bypass (android 12 below) https://youtube.com/shorts/-w8H0lkFxb0
-- Keylogger https://youtube.com/shorts/Ll9dNrkjFOA
-- Notifications listener
-- SMS listener
-- Phone call recording
-- Image capturing and screenshots
-- Video recording
-- Persistence 
-- Read & write contacts
-- List installed applications
-- Download & upload files
-- Get device location
+- Without port forwarding 
+- Telegram based android rat
+- Get gmail list(List of all Gmail accounts installed on mobile phones)
+- Read notifications any apps(Whatsapp,Instagram,etc)
+- Read incoming SMS
+- Cannot delete.
+- Persistence
 
 [![Tutorial Video](https://img.youtube.com/vi/ykOx19hAaD4/0.jpg)](https://youtu.be/ykOx19hAaD4)
 
