@@ -12,10 +12,9 @@
 </p>   
 
 ## Features
- - Read all the files of Internal Storage
- - Download Any Media to your Device from Victims Device
- - Get all the system information of Victim Device
- - Retrieve the List of Installed Applications
- - Retrive SMS
- - Retrive Call Logs
+ - Read all the notification (WhatsApp,Instagram,etc)
+ - Read all Incoming SMS
+ - anti uninstall
+ - Get gmail list (What kind of Gmail logins are there? That list.)
+ - Working Android(10 to 15)
 
