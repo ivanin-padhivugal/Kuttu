@@ -1,19 +1,16 @@
-
-
 <p align="center">
-<img src='WEB PANEL/img/logo.png' style="height:100px;width:100px;" >
+  <img width="250" height="250" src="https://media3.giphy.com/media/XALwMpWaCJ5gr4Fcps/giphy.gif?cid=6c09b952upcyl1meas3obbs87sia3e1etx3x9i8ef68mxvwq&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s">
 </p>
-<h1 align=center>AIRAVAT</h1>
+<h1 align="center">KUTTU</h1><p align="center">
+<b>⚠️Disclaimer : This software is meant for educational purposes only. I'm not responsible for any malicious use of the app.
+</p>   
 
-#### A multifunctional Android RAT with GUI based Web Panel without port forwarding.
+<p align=center>  
+<a href=https://www.instagram.com/ashwin_hackr?igsh=MXZxbWVwcWs3bHZuMA==><img src="https://img.shields.io/badge/Author-Ashwin-red.svg?style=for-the-badge&label=Author" /></a>
 
-> [!IMPORTANT]
-> The source code has been published <a href="./ANDROID APP/AIRAVAT.swb" >here</a> use <a href="https://github.com/Sketchware-Pro/Sketchware-Pro" >Sketchware Pro</a> to view the source code.
+<img src="https://img.shields.io/badge/Version-1.0-brightgreen?style=for-the-badge" >
+</p>   
 
-
-<div align="center">
-
-</div>
 
 ### Features
 - Permissions bypass (android 12 below) https://youtube.com/shorts/-w8H0lkFxb0
