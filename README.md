@@ -32,11 +32,11 @@
 
 ## 📽️ Demo  
 
-| Screenshot 1 | Screenshot 2 |
+| NOTIFICATION | GMAIL LIST |
 |:-------------------------:|:-------------------------:|
 | <img src="/image/notification.png" width="400"> | <img src="/image/gmail.png" width="400"> |
 
-| Screenshot 3 | Screenshot 4 |
+| SIM INFO | SMS |
 |:-------------------------:|:-------------------------:|
 | <img src="/image/sim.png" width="400"> | <img src="image/sms.png" width="400"> |
 
