@@ -35,8 +35,8 @@
 
 ---
 
-### ℹ️ **Installation Guide**
-1. **Download APK** → [Click Here](apk/KUTTU.apk)  
+### ℹ️ **Installation Guid
+!.Install latest Releases of kuttu
 2. **Install the APK** on your Android device.  
 3. **Grant all necessary permissions** when prompted.  
 4. **Connect to Telegram Bot** by following the setup instructions.  
